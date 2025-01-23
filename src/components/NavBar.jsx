@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { BiSolidDashboard } from "react-icons/bi";
 import { RiTableAltFill } from "react-icons/ri";
 import { HiCreditCard } from "react-icons/hi";
-
+import { FaProductHunt } from "react-icons/fa6";
 import { MdBorderColor } from "react-icons/md";
 import { BsDatabaseFillCheck } from "react-icons/bs";
 import { BsFillPersonPlusFill } from "react-icons/bs";
@@ -12,6 +12,7 @@ import { MdLightMode } from "react-icons/md";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { RiLogoutBoxFill } from "react-icons/ri";
 import { FaHandsHelping } from "react-icons/fa";
+import { GiSatelliteCommunication } from "react-icons/gi";
 
 const NavBar = () => {
   const location = useLocation();
@@ -87,6 +88,25 @@ const NavBar = () => {
                   <HiCreditCard />
                 </div>
                 <Link to="/Billing">Billings</Link>
+              </div>
+
+              <div
+                className={`flex items-center gap-3 cursor-pointer p-2 ${
+                  isActive("/Products")
+                    ? "bg-white p-2 rounded-[16px] drop-shadow-sm shadow-sm"
+                    : ""
+                }`}
+              >
+                <div
+                  className={`${
+                    isActive("/Products")
+                      ? "bg-blue-600 text-white p-2 rounded-md shadow-md"
+                      : "bg-white p-2 rounded-md shadow-md text-[1rem]"
+                  }`}
+                >
+                  <FaProductHunt />
+                </div>
+                <Link to="/Products">Products</Link>
               </div>
 
               <div
@@ -188,13 +208,6 @@ const NavBar = () => {
                 <Link to="/SignUp">Sign Up</Link>
               </div>
 
-              <div className="flex items-center gap-3 cursor-pointer p-2">
-                <div className="bg-white p-2 rounded-md shadow-md text-[1rem]">
-                  <RiLogoutBoxFill />
-                </div>
-                <li>Log out</li>
-              </div>
-
               <li className="uppercase text-[12px] ml-4 my-2 font-bold opacity-50">
                 Customers
               </li>
@@ -217,23 +230,24 @@ const NavBar = () => {
                 </div>
                 <Link to="/HelpAndSupport">Help and Support</Link>
               </div>
+
               <div
                 className={`flex items-center gap-3 cursor-pointer p-2 ${
-                  isActive("/HelpAndSupport")
+                  isActive("/CommunicationLog")
                     ? "bg-white p-2 rounded-[16px] drop-shadow-sm shadow-sm"
                     : ""
                 }`}
               >
                 <div
                   className={`${
-                    isActive("/HelpAndSupport")
+                    isActive("/CommunicationLog")
                       ? "bg-blue-600 text-white p-2 rounded-md shadow-md"
                       : "bg-white p-2 rounded-md shadow-md text-[1rem] text-blue-600"
                   }`}
                 >
-                  <FaHandsHelping />
+                  <GiSatelliteCommunication />
                 </div>
-                <Link to="/HelpAndSupport">Help and Support</Link>
+                <Link to="/CommunicationLog">Communication Log</Link>
               </div>
             </ul>
           </div>
