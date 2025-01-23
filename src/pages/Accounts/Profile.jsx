@@ -1,4 +1,4 @@
-import NavBar from "../../components/NavBar";
+import NavBar from "../../components/navBar/NavBar";
 import Input from "../../components/Input";
 import Avatar from "../../components/Avater";
 import LogoutButton from "../../components/LogoutButton";
