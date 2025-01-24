@@ -1,10 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 import NavItem from "./NavItem";
 
 import Input from "../Input";
-import LogoutButton from "../LogoutButton";
+import Button from "../Button";
 import Avatar from "../Avater";
 import Offcanvas from "./Offcanvas";
 
@@ -34,7 +33,7 @@ const NavBar = () => {
   return (
     <>
       {/*----------------------------- SMALL SCREEN NAVBAR -----------------------------*/}
-      <nav className=" w-screen  border-b-2 shadow-sm lg:hidden">
+      <nav className=" w-screen border-b-2 shadow-sm lg:hidden">
         <div className="grid gap-4 mx-4 py-4">
           <div className="flex justify-between">
             <div className="text-sm">
@@ -47,7 +46,7 @@ const NavBar = () => {
 
           <div className="flex justify-center items-center gap-2">
             <Input />
-            <LogoutButton />
+            <Button title="Log out" Color="blue" />
             <HiBars3BottomRight
               onClick={toggleOffcanvas}
               className="text-4xl md:text-5xl"
