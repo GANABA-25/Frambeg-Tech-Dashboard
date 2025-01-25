@@ -10,7 +10,7 @@ const MetricCard = ({
   return (
     <div className="font-inter">
       <div
-        className="grid gap-4 rounded-xl text-white p-4 shadow-lg"
+        className="grid gap-4 rounded-xl border text-white p-4 shadow-lg"
         style={{ backgroundColor: backgroundColor }}
       >
         <div className="bg-white text-black rounded-full w-[2.5rem] p-2 text-2xl">

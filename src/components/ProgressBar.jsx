@@ -65,7 +65,7 @@ const ProgressBar = React.forwardRef(
       >
         <div
           className={cx(
-            "relative flex h-2 w-full items-center rounded-full",
+            "relative flex h-[0.38rem] w-full items-center rounded-full",
             background()
           )}
         >
